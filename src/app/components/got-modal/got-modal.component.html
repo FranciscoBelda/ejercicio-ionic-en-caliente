@@ -1,0 +1,29 @@
+<ion-modal #modal [trigger]="'modal-'+char().id" (willDismiss)="onWillDismiss($event)">
+  <ng-template>
+    <ion-content class="ion-padding">
+      <ion-card>
+        <img [src]="char().imageUrl" alt="">
+        <ion-card-content>
+          <ion-badge color="warning">{{char().title}}</ion-badge>
+          <p>{{char().family}}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-content>
+    <ion-footer>
+      <ion-toolbar color="dark">
+        <ion-title class="ion-text-center">{{char().fullName}}</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="modal.dismiss(char(), 'save')">
+            <ion-icon name="save"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="start">
+          <ion-button (click)="modal.dismiss(null, 'cancel')">
+            <ion-icon name="close"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-footer>
+  </ng-template>
+</ion-modal>
+

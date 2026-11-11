@@ -1,8 +1,8 @@
 {
   "name": "07-ejercicio-en-caliente",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "version": "1.0.0",
+  "author": "Francisco Belda",
+  "homepage": "https://www.youtube.com/@franciscobelda",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -34,6 +34,7 @@
     "@ionic/angular": "^9.0.0",
     "ionicons": "^8.1.0",
     "rxjs": "~7.8.0",
+    "swiper": "^14.4.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {

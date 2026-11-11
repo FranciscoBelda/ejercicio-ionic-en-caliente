@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-title>Cats</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<swiper-container>
+  <swiper-slide>
+  <ion-card (click)="loadCatFact()">
+    <ion-card-content>
+      {{catFact()}}
+    </ion-card-content>
+  </ion-card>
+  </swiper-slide>
+  <swiper-slide>
+  <ion-card>
+    <ion-card-content>
+      {{catFact()}}
+    </ion-card-content>
+  </ion-card>
+  </swiper-slide>
+</swiper-container>
+
+  <ion-button expand="block" color="secondary" routerLink="/">go to DOGS</ion-button>
+  <ion-item-divider></ion-item-divider>
+  <div class="ion-display-flex ion-justify-content-center">
+    <ion-button shape="round" color="dark" routerLink="/got">
+      <ion-icon slot="icon-only" name="logo-gitlab"></ion-icon>
+    </ion-button>
+  </div>
+</ion-content>

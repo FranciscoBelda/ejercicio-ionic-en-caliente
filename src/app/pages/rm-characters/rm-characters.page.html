@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Rick & Morty</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  @for (char of characters(); track char.id){
+    <ion-card>
+      <ion-card-header><ion-card-title>{{char.name}}</ion-card-title>
+      </ion-card-header>
+      <img [src]="char.image" alt="">
+      <ion-card-content>
+        <p><ion-badge color="primary">{{char.species}}</ion-badge> </p>
+      </ion-card-content>
+    </ion-card>
+
+  }
+
+
+  <ion-infinite-scroll (ionInfinite)="loadMore($event)">
+    <ion-infinite-scroll-content loadingSpinner="dots"></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

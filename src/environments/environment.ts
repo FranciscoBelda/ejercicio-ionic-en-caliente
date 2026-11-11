@@ -4,6 +4,10 @@
 
 export const environment = {
   production: false,
+  URLBaseDog: 'https://dog.ceo/api/breeds/image/random',
+  URLBaseCat: 'https://meowfacts.herokuapp.com/',
+  URLBaseGoT: 'https://thronesapi.com/api/v2/characters',
+  URLBaseRM: 'https://rickandmortyapi.com/api',
 };
 
 /*
